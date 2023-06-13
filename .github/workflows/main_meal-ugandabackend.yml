@@ -33,7 +33,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: java-app
-          path: build/libs/app.war
+          path: build/libs/demo-app-0.1.war
 
   deploy:
     runs-on: ubuntu-latest
@@ -55,4 +55,4 @@ jobs:
           app-name: 'meal-ugandabackend'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_6C8D47AC7A434992A60CF5F0E5F12EF7 }}
-          package: 'app.war'
+          package: 'demo-app-0.1.war'
