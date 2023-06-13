@@ -33,7 +33,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: java-app
-          path: server/build/libs/app.war
+          path: demo-app/build/libs/app.war
 
   deploy:
     runs-on: ubuntu-latest
