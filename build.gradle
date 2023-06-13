@@ -10,6 +10,23 @@ buildscript {
     }
 }
 
+plugins {
+    id "com.microsoft.azure.azurewebapp" version "1.1.0"
+}
+
+azurewebapp {
+    subscription = '73813dd1-c19d-4335-b65b-c32aa3f6aa06'
+    resourceGroup = 'Uganda'
+    appName = 'demo-app'
+    pricingTier = 'P1v3'
+    region = 'southafricanorth'
+    runtime {
+        os = 'Linux'
+        webContainer = 'Tomcat 8.5' // or 'Java SE' if you want to run an executable jar
+        javaVersion = 'Java 8'
+    }
+}
+
 version "0.1"
 group "demo.app"
 
@@ -30,6 +47,8 @@ configurations {
         extendsFrom developmentOnly
     }
 }
+
+
 
 dependencies {
     developmentOnly("org.springframework.boot:spring-boot-devtools")
