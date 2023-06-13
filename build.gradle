@@ -22,8 +22,8 @@ azurewebapp {
     region = 'southafricanorth'
     runtime {
         os = 'Linux'
-        webContainer = 'Java SE' // or 'Java SE' if you want to run an executable jar
-        javaVersion = 'Java 11'
+        webContainer = 'Tomcat 8.5' // or 'Java SE' if you want to run an executable jar
+        javaVersion = 'Java 8'
     }
 }
 
@@ -32,7 +32,7 @@ group "demo.app"
 
 apply plugin:"eclipse"
 apply plugin:"idea"
-//apply plugin:"war"
+apply plugin:"war"
 apply plugin:"org.grails.grails-web"
 apply plugin:"org.grails.plugins.views-json"
 
@@ -102,14 +102,14 @@ bootRun {
     systemProperty springProfilesActive, System.getProperty(springProfilesActive)
 }
 
-jar {
-    archiveName('demo-app-0.1.jar')
-}
-bootJar {
-    archiveBaseName = 'demo-app'
-    archiveVersion = '1.0.0'
-    archiveFileName = 'demo-app-0.1.jar'
-}
+//jar {
+//    archiveName('demo-app-0.1.jar')
+//}
+//bootJar {
+//    archiveBaseName = 'demo-app'
+//    archiveVersion = '1.0.0'
+//    archiveFileName = 'demo-app-0.1.jar'
+//}
 
 
 tasks.withType(GroovyCompile) {
