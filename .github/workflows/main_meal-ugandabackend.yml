@@ -24,7 +24,7 @@ jobs:
       - name: Build with Gradle
         uses: gradle/gradle-build-action@v2
         with:
-          gradle-version: 5.1.1
+          gradle-version: 6.8.1
         
       - name: Build artifact
         run: gradle assemble -x test -x integrationTest
