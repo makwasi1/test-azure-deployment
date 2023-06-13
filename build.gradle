@@ -17,7 +17,7 @@ plugins {
 azurewebapp {
     subscription = '73813dd1-c19d-4335-b65b-c32aa3f6aa06'
     resourceGroup = 'Uganda'
-    appName = 'demo-app'
+    appName = 'meal-ugandabackend'
     pricingTier = 'P1v3'
     region = 'southafricanorth'
     runtime {
